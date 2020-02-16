@@ -4,7 +4,6 @@ Docker Image Template
 Software in a Docker container, with configuration files in a volume, and a configurable UID/GID for said files.
 
 [![](https://circleci.com/gh/wastrachan/docker-image-template.svg?style=svg)](https://circleci.com/gh/wastrachan/docker-image-template)
-[![](https://images.microbadger.com/badges/image/wastrachan/docker-image-template.svg)](https://microbadger.com/images/wastrachan/docker-image-template)
 [![](https://img.shields.io/docker-image-template/pulls/wastrachan/docker-image-template.svg)](https://hub.docker-image-template.com/r/wastrachan/docker-image-template)
 
 ## Install
