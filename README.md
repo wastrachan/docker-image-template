@@ -38,6 +38,7 @@ docker run -v "$(pwd)/config:/config" \
            --name image-template \
            -e PUID=1111 \
            -e PGID=1112 \
+           -e TZ=UTC \
            --restart unless-stopped \
            wastrachan/docker-image-template:latest
 ```
@@ -57,6 +58,7 @@ services:
     environment:
       - PUID=1111
       - PGID=1112
+      - TZ=UTC
     volumes:
       - </path/to/config>:/config
     ports:
@@ -71,6 +73,9 @@ Configuration files are stored in the `/config` volume. You may wish to mount th
 
 #### User / Group Identifiers
 If you'd like to override the UID and GID of the application, you can do so with the environment variables `PUID` and `PGID`. This is helpful if other containers must access your configuration volume.
+
+#### Timezone
+The timezone the container uses defaults to `UTC`, and can be overridden with the `TZ` environment variable.
 
 #### Services
 Service     | Port

@@ -1,7 +1,7 @@
 # Docker Image Makefile
 #
-# Copyright (c) Winston Astrachan 2019
-#
+# Copyright (c) Winston Astrachan 2021
+
 help:
 	@echo ""
 	@echo "Usage: make COMMAND"

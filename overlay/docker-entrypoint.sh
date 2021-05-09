@@ -1,15 +1,17 @@
 #!/usr/bin/env sh
 set -e
 
-PUID="${PUID:-100}"
+PUID="${PUID:-101}"
 PGID="${PGID:-101}"
+export TZ="${TZ:-UTC}"
 
 echo ""
 echo "----------------------------------------"
-echo " Starting up using the following:       "
+echo "Starting up using the following:       "
 echo "                                        "
-echo "     UID: $PUID                         "
-echo "     GID: $PGID                         "
+echo "    UID: $PUID                          "
+echo "    GID: $PGID                          "
+echo "    TZ:  $TZ                            "
 echo "----------------------------------------"
 echo ""
 
@@ -19,7 +21,7 @@ if [ ! -f "/config/config.yml" ]; then
 fi
 
 # Set UID/GID of software user
-sed -i "s/^software\:x\:100\:101/software\:x\:$PUID\:$PGID/" /etc/passwd
+sed -i "s/^software\:x\:101\:101/software\:x\:$PUID\:$PGID/" /etc/passwd
 sed -i "s/^software\:x\:101/software\:x\:$PGID/" /etc/group
 
 # Set permissions
